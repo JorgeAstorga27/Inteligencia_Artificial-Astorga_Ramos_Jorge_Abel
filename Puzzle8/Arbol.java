@@ -86,4 +86,40 @@ public class Arbol {
         }
         return null;
     }
+
+    Nodo BusquedaEsquinas(String estadoObjetivo) {
+
+        if (raiz == null) return null;
+
+        PriorityQueue<Nodo> abiertos = new PriorityQueue<>();
+        HashSet<String> cerrados = new HashSet<>();
+
+        raiz.costo = raiz.nivel + raiz.heuristicaEsquinas(estadoObjetivo);
+        abiertos.add(raiz);
+
+        while (!abiertos.isEmpty()) {
+
+            Nodo actual = abiertos.poll();
+
+            if (actual.estado.equals(estadoObjetivo))
+                return actual;
+
+            cerrados.add(actual.estado);
+
+            for (Nodo hijo : actual.generarSucesores()) {
+
+                if (!cerrados.contains(hijo.estado)) {
+
+                    int g = hijo.nivel;
+                    int h = hijo.heuristicaEsquinas(estadoObjetivo);
+
+                    hijo.costo = g + h;
+
+                    abiertos.add(hijo);
+                }
+            }
+        }
+
+        return null;
+    }
 }
