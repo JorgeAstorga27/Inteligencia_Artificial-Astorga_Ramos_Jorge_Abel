@@ -6,6 +6,7 @@ import java.util.LinkedList;
 
 public class Nodo implements Comparable<Nodo> {
 
+
     String estado;
     int nivel;   // g(n)
     int costo;   // f(n) = g(n) + h(n)

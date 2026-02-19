@@ -2,6 +2,7 @@ package Puzzle8;
 
 import java.util.*;
 
+
 public class Arbol {
     Nodo raiz;
 
