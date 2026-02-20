@@ -4,12 +4,14 @@ import java.util.*;
 
 public class Arbol {
     Nodo raiz;
+    public int nodosExplorados;
 
     public Arbol(Nodo raiz) {
         this.raiz = raiz;
     }
 
     Nodo BusquedaAnchura(String estadoObjetivo) {
+        nodosExplorados = 0;
         if (raiz == null) return null;
 
         HashSet<String> visitados = new HashSet<>();
@@ -19,12 +21,10 @@ public class Arbol {
 
         while (!cola.isEmpty()) {
             Nodo actual = cola.poll();
-            if (actual.estado.equals(estadoObjetivo)) {
-                return actual;
-            }
+            nodosExplorados++;
+            if (actual.estado.equals(estadoObjetivo)) return actual;
 
-            List<Nodo> sucesores = actual.generarSucesores();
-            for (Nodo hijo : sucesores) {
+            for (Nodo hijo : actual.generarSucesores()) {
                 if (!visitados.contains(hijo.estado)) {
                     visitados.add(hijo.estado);
                     cola.add(hijo);
@@ -35,6 +35,7 @@ public class Arbol {
     }
 
     Nodo BusquedaProfundidad(String estadoObjetivo) {
+        nodosExplorados = 0;
         if (raiz == null) return null;
 
         HashSet<String> visitados = new HashSet<>();
@@ -44,12 +45,10 @@ public class Arbol {
 
         while (!pila.isEmpty()) {
             Nodo actual = pila.pop();
-            if (actual.estado.equals(estadoObjetivo)) {
-                return actual;
-            }
+            nodosExplorados++;
+            if (actual.estado.equals(estadoObjetivo)) return actual;
 
-            List<Nodo> sucesores = actual.generarSucesores();
-            for (Nodo hijo : sucesores) {
+            for (Nodo hijo : actual.generarSucesores()) {
                 if (!visitados.contains(hijo.estado)) {
                     visitados.add(hijo.estado);
                     pila.push(hijo);
@@ -60,23 +59,20 @@ public class Arbol {
     }
 
     Nodo BusquedaCostoUniforme(String estadoObjetivo) {
+        nodosExplorados = 0;
         if (raiz == null) return null;
 
         HashSet<String> visitados = new HashSet<>();
         PriorityQueue<Nodo> frontera = new PriorityQueue<>();
-
         raiz.costo = 0;
         frontera.add(raiz);
 
         while (!frontera.isEmpty()) {
             Nodo actual = frontera.poll();
-
-            if (actual.estado.equals(estadoObjetivo)) {
-                return actual;
-            }
-
             if (!visitados.contains(actual.estado)) {
+                nodosExplorados++;
                 visitados.add(actual.estado);
+                if (actual.estado.equals(estadoObjetivo)) return actual;
 
                 for (Nodo hijo : actual.generarSucesores()) {
                     if (!visitados.contains(hijo.estado)) {
@@ -90,38 +86,27 @@ public class Arbol {
     }
 
     Nodo BusquedaEsquinas(String estadoObjetivo) {
-
+        nodosExplorados = 0;
         if (raiz == null) return null;
 
         PriorityQueue<Nodo> abiertos = new PriorityQueue<>();
         HashSet<String> cerrados = new HashSet<>();
-
         raiz.costo = raiz.nivel + raiz.heuristicaEsquinas(estadoObjetivo);
         abiertos.add(raiz);
 
         while (!abiertos.isEmpty()) {
-
             Nodo actual = abiertos.poll();
-
-            if (actual.estado.equals(estadoObjetivo))
-                return actual;
+            nodosExplorados++;
+            if (actual.estado.equals(estadoObjetivo)) return actual;
 
             cerrados.add(actual.estado);
-
             for (Nodo hijo : actual.generarSucesores()) {
-
                 if (!cerrados.contains(hijo.estado)) {
-
-                    int g = hijo.nivel;
-                    int h = hijo.heuristicaEsquinas(estadoObjetivo);
-
-                    hijo.costo = g + h;
-
+                    hijo.costo = hijo.nivel + hijo.heuristicaEsquinas(estadoObjetivo);
                     abiertos.add(hijo);
                 }
             }
         }
-
         return null;
     }
 }

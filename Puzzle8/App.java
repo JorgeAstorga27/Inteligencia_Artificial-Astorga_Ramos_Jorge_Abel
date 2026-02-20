@@ -2,7 +2,6 @@ package Puzzle8;
 
 import java.util.Scanner;
 
-
 public class App {
 
     public static void main(String[] args) {
@@ -19,10 +18,10 @@ public class App {
             System.out.println("Estado inicial: " + estadoInicial);
             System.out.println("Estado objetivo: " + objetivo);
             System.out.println("----------------------");
-            System.out.println("1. Búsqueda en Anchura ");
-            System.out.println("2. Búsqueda en Profundidad ");
+            System.out.println("1. Búsqueda en Anchura");
+            System.out.println("2. Búsqueda en Profundidad");
             System.out.println("3. Búsqueda por Costo Uniforme");
-            System.out.println("4. Heurística Esquinas ");
+            System.out.println("4. Heurística Esquinas");
             System.out.println("5. Tabla comparativa de todos los métodos");
             System.out.println("6. Salir");
             System.out.print("Seleccione una opción: ");
@@ -43,30 +42,23 @@ public class App {
         Arbol puzzle = new Arbol(raiz);
         Nodo resultado = null;
 
-        long inicio = System.currentTimeMillis();
+        long inicio = System.nanoTime();
 
         switch (opcion) {
-            case 1:
-                resultado = puzzle.BusquedaAnchura(objetivo);
-                break;
-            case 2:
-                resultado = puzzle.BusquedaProfundidad(objetivo);
-                break;
-            case 3:
-                resultado = puzzle.BusquedaCostoUniforme(objetivo);
-                break;
-            case 4:
-                resultado = puzzle.BusquedaEsquinas(objetivo);
-                break;
+            case 1: resultado = puzzle.BusquedaAnchura(objetivo); break;
+            case 2: resultado = puzzle.BusquedaProfundidad(objetivo); break;
+            case 3: resultado = puzzle.BusquedaCostoUniforme(objetivo); break;
+            case 4: resultado = puzzle.BusquedaEsquinas(objetivo); break;
         }
 
-        long fin = System.currentTimeMillis();
+        long fin = System.nanoTime();
 
         if (resultado != null) {
             System.out.println("\n===== SOLUCIÓN ENCONTRADA =====");
             resultado.imprimirCamino();
             System.out.println("Profundidad (nivel): " + resultado.nivel);
-            System.out.println("Tiempo de ejecución: " + (fin - inicio) + " ms");
+            System.out.println("Nodos explorados: " + puzzle.nodosExplorados);
+            System.out.printf("Tiempo de ejecución: %.3f ms%n", (fin - inicio) / 1_000_000.0);
         } else {
             System.out.println("No se encontró solución.");
         }
@@ -76,12 +68,7 @@ public class App {
 
         System.out.println("\n================ TABLA COMPARATIVA ================");
 
-        String[] nombres = {
-                "BFS",
-                "DFS",
-                "Costo Uniforme",
-                "Esquinas"
-        };
+        String[] nombres = {"BFS", "DFS", "Costo Uniforme", "Esquinas"};
 
         for (int i = 1; i <= 4; i++) {
 
@@ -89,36 +76,28 @@ public class App {
             Arbol puzzle = new Arbol(raiz);
             Nodo resultado = null;
 
-            long inicio = System.currentTimeMillis();
+            long inicio = System.nanoTime();
 
             switch (i) {
-                case 1:
-                    resultado = puzzle.BusquedaAnchura(objetivo);
-                    break;
-                case 2:
-                    resultado = puzzle.BusquedaProfundidad(objetivo);
-                    break;
-                case 3:
-                    resultado = puzzle.BusquedaCostoUniforme(objetivo);
-                    break;
-                case 4:
-                    resultado = puzzle.BusquedaEsquinas(objetivo);
-                    break;
+                case 1: resultado = puzzle.BusquedaAnchura(objetivo); break;
+                case 2: resultado = puzzle.BusquedaProfundidad(objetivo); break;
+                case 3: resultado = puzzle.BusquedaCostoUniforme(objetivo); break;
+                case 4: resultado = puzzle.BusquedaEsquinas(objetivo); break;
             }
 
-            long fin = System.currentTimeMillis();
-
-            long tiempo = fin - inicio;
+            long fin = System.nanoTime();
 
             if (resultado != null) {
-                System.out.printf("%-18s | Profundidad: %-4d | Tiempo: %-5d ms\n",
+                System.out.printf("%-18s | Profundidad: %-4d | Nodos: %-6d | Tiempo: %.3f ms%n",
                         nombres[i - 1],
                         resultado.nivel,
-                        tiempo);
+                        puzzle.nodosExplorados,
+                        (fin - inicio) / 1_000_000.0);
             } else {
-                System.out.printf("%-18s | No encontró solución | Tiempo: %-5d ms\n",
+                System.out.printf("%-18s | No encontró solución | Nodos: %-6d | Tiempo: %.3f ms%n",
                         nombres[i - 1],
-                        tiempo);
+                        puzzle.nodosExplorados,
+                        (fin - inicio) / 1_000_000.0);
             }
         }
 
