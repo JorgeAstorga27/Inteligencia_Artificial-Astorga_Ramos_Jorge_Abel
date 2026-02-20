@@ -2,7 +2,6 @@ package Puzzle8;
 
 import java.util.*;
 
-
 public class Arbol {
     Nodo raiz;
 
@@ -24,7 +23,7 @@ public class Arbol {
                 return actual;
             }
 
-           List<Nodo> sucesores = actual.generarSucesores();
+            List<Nodo> sucesores = actual.generarSucesores();
             for (Nodo hijo : sucesores) {
                 if (!visitados.contains(hijo.estado)) {
                     visitados.add(hijo.estado);
@@ -64,22 +63,24 @@ public class Arbol {
         if (raiz == null) return null;
 
         HashSet<String> visitados = new HashSet<>();
-
-        // PriorityQueue ordenará los nodos automáticamente usando el compareTo que creamos
         PriorityQueue<Nodo> frontera = new PriorityQueue<>();
 
+        raiz.costo = 0;
         frontera.add(raiz);
+
         while (!frontera.isEmpty()) {
             Nodo actual = frontera.poll();
 
             if (actual.estado.equals(estadoObjetivo)) {
                 return actual;
             }
+
             if (!visitados.contains(actual.estado)) {
                 visitados.add(actual.estado);
-                List<Nodo> sucesores = actual.generarSucesores();
-                for (Nodo hijo : sucesores) {
+
+                for (Nodo hijo : actual.generarSucesores()) {
                     if (!visitados.contains(hijo.estado)) {
+                        hijo.costo = actual.costo + 1;
                         frontera.add(hijo);
                     }
                 }
