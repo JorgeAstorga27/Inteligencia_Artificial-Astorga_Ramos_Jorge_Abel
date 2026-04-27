@@ -11,8 +11,8 @@ BATCH_SIZE = 32
 train_datagen = ImageDataGenerator(rescale=1./255, rotation_range=20, horizontal_flip=True)
 val_datagen = ImageDataGenerator(rescale=1./255)
 
-train_gen = train_datagen.flow_from_directory(r'C:\Users\jesu1\OneDrive\Documentos\Tecnológico de Culiacán\Semestre 8\Inteligencia Artificial\Repositorio IA\Segundo Parcial\Reconocimiento Facial (Clase)\data\train', target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='sparse')
-val_gen = val_datagen.flow_from_directory(r'C:\Users\jesu1\OneDrive\Documentos\Tecnológico de Culiacán\Semestre 8\Inteligencia Artificial\Repositorio IA\Segundo Parcial\Reconocimiento Facial (Clase)\data\val', target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='sparse')
+train_gen = train_datagen.flow_from_directory(r'C:\Users\jorge\Documents\IA\Inteligencia_Artificial-Astorga_Ramos_Jorge_Abel\Reconocimiento Facial - Ejercicio\data\train', target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='sparse')
+val_gen = val_datagen.flow_from_directory(r'C:\Users\jorge\Documents\IA\Inteligencia_Artificial-Astorga_Ramos_Jorge_Abel\Reconocimiento Facial - Ejercicio\data\val', target_size=IMG_SIZE, batch_size=BATCH_SIZE, class_mode='sparse')
 
 # 2. Build Model (Transfer Learning)
 base_model = tf.keras.applications.MobileNetV2(input_shape=(160, 160, 3), include_top=False, weights='imagenet')

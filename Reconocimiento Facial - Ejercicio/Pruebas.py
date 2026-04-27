@@ -3,7 +3,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import tensorflow as tf
 
-def predict_celebrity(img_path, class_names, model_path=r'C:\Users\jesu1\OneDrive\Documentos\Tecnológico de Culiacán\Semestre 8\Inteligencia Artificial\Repositorio IA\Segundo Parcial\Reconocimiento Facial (Clase)\celebrity_model.h5'):
+def predict_celebrity(img_path, class_names, model_path=r'C:\Users\jorge\Documents\IA\Inteligencia_Artificial-Astorga_Ramos_Jorge_Abel\Reconocimiento Facial - Ejercicio\celebrity_model.h5'):
     # Load model and image
     model = tf.keras.models.load_model(model_path)
     img = image.load_img(img_path, target_size=(160, 160))
@@ -25,6 +25,6 @@ def predict_celebrity(img_path, class_names, model_path=r'C:\Users\jesu1\OneDriv
 
 # Usage:
 mis_clases = ['ben_afflek', 'elton_john', 'jerry_seinfeld', 'madonna', 'mindy_kaling']
-foto_prueba = r"C:\Users\jesu1\OneDrive\Documentos\Tecnológico de Culiacán\Semestre 8\Inteligencia Artificial\Repositorio IA\Segundo Parcial\Reconocimiento Facial (Clase)\data\val\ben_afflek\1.jpg"
+foto_prueba = r"C:\Users\jorge\Documents\IA\Inteligencia_Artificial-Astorga_Ramos_Jorge_Abel\Reconocimiento Facial - Ejercicio\data\val\ben_afflek\1.jpg"
 
 predict_celebrity(foto_prueba, mis_clases)
