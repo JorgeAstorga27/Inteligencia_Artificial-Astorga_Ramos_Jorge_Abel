@@ -40,7 +40,7 @@ def dibujar_esquinas(frame, x, y, w, h, color, grosor=2, longitud=25):
 
 # Cargar el modelo (modelo_facial_profundo.h5) que entrenamos en la clase CNNEntrenamiento.py.
 # Ajustar la ruta según donde se haya guardado.
-model_path = r'C:\Users\jesu1\OneDrive\Documentos\Tecnológico de Culiacán\Semestre 8\Inteligencia Artificial\Repositorio IA\Segundo Parcial\Reconocimiento Facial\modelo_facial_profundo.h5'
+model_path = r'C:\Users\jorge\Documents\IA\Inteligencia_Artificial-Astorga_Ramos_Jorge_Abel\Reconocimiento Facial - Proyecto terminado\modelo_facial_profundo.h5'
 print("Cargando modelo neuronal... por favor espera.")
 model = tf.keras.models.load_model(model_path)
 print("¡Modelo cargado exitosamente!")
