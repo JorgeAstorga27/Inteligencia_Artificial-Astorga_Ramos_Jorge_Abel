@@ -38,6 +38,15 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 * **`CNN` (Convolutional Neural Networks)**: Redes neuronales convolucionales optimizadas para la extracción de características espaciales en imágenes.
 * **`Reconocimiento Facial - Ejercicio`**: Prácticas iniciales y pruebas de concepto utilizando algoritmos clásicos de reconocimiento y extracción de características.
 
+- [CNN](./Ejercicios/code/CNN)
+- [KMeans](./Ejercicios/code/KMeans)
+- [KNN](./Ejercicios/code/KNN)
+- [Multilayer Perceptron](./Ejercicios/code/MultilayerPerceptron)
+- [Perceptrón](./Ejercicios/code/Perceptron)
+- [Red Neuronal](./Ejercicios/code/RedNeuronal)
+- [Regresión Lineal](./Ejercicios/code/RegresionLineal)
+- [SVM](./Ejercicios/code/SVM)
+- [Otros ejercicios Machine Learning](./Ejercicios/code/Machine%20Learning)
 ---
 
 ## 4. Proyectos Finales
