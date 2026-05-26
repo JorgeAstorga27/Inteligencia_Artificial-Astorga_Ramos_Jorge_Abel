@@ -24,7 +24,7 @@ Implementación de soluciones a problemas complejos de lógica y optimización m
 Bloque dedicado al ciclo completo de desarrollo de un sistema de visión artificial enfocado en la biometría facial.
 
 * **`Reconocimiento Facial (Dataset y Al...)`**: Recolección de muestras, preprocesamiento de imágenes, limpieza y estructuración del dataset de rostros.
-* - [DATASET](./Reconocimiento Facial (Dataset y Algoritmos de procesamiento))
+* - [Dataset Rostros](./Reconocimiento%20Facial%20%28Dataset%20y%20Algoritmos%20de%20procesamiento%29)
 
 ---
 
@@ -63,6 +63,6 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 ---
 ### 5. Recursos Adicionales del Repositorio
 * **`Diagnostico`**: Evaluaciones iniciales y actividades introductorias del curso.
-* * - [Diagnostico](./Diagnostico)
+*  - [Diagnostico](./Diagnostico)
 * **`Exposicion`**: Exposicion sobre los modelos de IA usados en compiladores, con ejemplos.
-* * - [Exposicion](./Exposicion)
+*  - [Exposicion](./Exposicion)
