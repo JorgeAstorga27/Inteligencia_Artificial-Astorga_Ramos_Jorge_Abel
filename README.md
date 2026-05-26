@@ -11,12 +11,12 @@
 ---
 
 ##  1. Búsquedas Inteligentes
-Implementación de soluciones a problemas complejos de lógica y optimización mediante la exploración de espacios de estados utilizando algoritmos de búsqueda ciega e heurística (como BFS, DFS e IDA* con heurísticas avanzadas).
+Implementación de soluciones a problemas complejos de lógica y optimización mediante la exploración de espacios de estados utilizando algoritmos de búsqueda ciega e heurística.
 
 * **`Puzzle8`**: Resolución del clásico juego del tablero 3x3 utilizando estrategias de búsqueda inteligente.
-* [Puzzle8](./Puzzle8)
-* **`Puzzle24`**: Extensión del problema a un tablero de 5x5, requiriendo optimizaciones y heurísticas más complejas (como distancia de Manhattan y conflictos lineales).
-* [Puzzle24](./Puzzle24)
+* - [Puzzle8](./Puzzle8)
+* **`Puzzle24`**: Extensión del problema a un tablero de 5x5, requiriendo optimizaciones y heurísticas más complejas.
+* - [Puzzle24](./Puzzle24)
 
 ---
 
@@ -35,6 +35,8 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 * - [Regresión Lineal](./Ejercicios/code/RegresionLineal)
 * **`KMeans`**: Algoritmo de aprendizaje no supervisado para la partición y agrupamiento (clustering) de datos por distancia.
 * - [KMeans](./Ejercicios/code/KMeans)
+* **`MeanShift`**: Algoritmo de agrupamiento basado en la densidad que busca iterativamente los modos o centros de mayor concentración de puntos.
+* - [MeanShift](./Ejercicios/code/MeanShift)
 * **`KNN` (K-Nearest Neighbors)**: Modelo de clasificación y regresión basado en la proximidad con los vecinos más cercanos.
 * - [KNN](./Ejercicios/code/KNN)
 * **`SVM` (Support Vector Machines)**: Clasificación de datos mediante la búsqueda del hiperplano de separación óptimo.
@@ -49,6 +51,7 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 * - [CNN](./Ejercicios/code/CNN)
 * **`Reconocimiento Facial - Ejercicio`**: Prácticas iniciales y pruebas de concepto utilizando algoritmos clásicos de reconocimiento y extracción de características.
 * - [Reconocimiento Ejercicio CNN](./Reconocimiento%20Facial%20-%20Ejercicio)
+* **`Machine Learning / Python`**: Scripts complementarios, utilidades y notebooks generales del ecosistema de Machine Learning.
 * - [Otros ejercicios Machine Learning](./Ejercicios/code/Machine%20Learning)
 
 ---
@@ -63,6 +66,6 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 ---
 ### 5. Recursos Adicionales del Repositorio
 * **`Diagnostico`**: Evaluaciones iniciales y actividades introductorias del curso.
-*  - [Diagnostico](./Diagnostico)
+* - [Diagnostico](./Diagnostico)
 * **`Exposicion`**: Exposicion sobre los modelos de IA usados en compiladores, con ejemplos.
-*  - [Exposicion](./Exposicion)
+* - [Exposicion](./Exposicion)
