@@ -69,3 +69,5 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 * - [Diagnostico](./Diagnostico)
 * **`Exposicion`**: Exposicion sobre los modelos de IA usados en compiladores, con ejemplos.
 * - [Exposicion](./Exposicion)
+* **`Historia de la IA`**: Ensayo o investigación documental sobre los antecedentes, evolución e hitos clave en el desarrollo de la Inteligencia Artificial.
+* - [Historia de la IA](./Historia%20de%20la%20IA%2C%20Astorga%20Ramos%20Jorge%20Abel.pdf)
