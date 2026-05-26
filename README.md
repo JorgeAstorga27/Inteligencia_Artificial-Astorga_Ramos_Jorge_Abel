@@ -14,7 +14,9 @@
 Implementación de soluciones a problemas complejos de lógica y optimización mediante la exploración de espacios de estados utilizando algoritmos de búsqueda ciega e heurística (como BFS, DFS e IDA* con heurísticas avanzadas).
 
 * **`Puzzle8`**: Resolución del clásico juego del tablero 3x3 utilizando estrategias de búsqueda inteligente.
+* [Puzzle8](./Puzzle8)
 * **`Puzzle24`**: Extensión del problema a un tablero de 5x5, requiriendo optimizaciones y heurísticas más complejas (como distancia de Manhattan y conflictos lineales).
+* [Puzzle24](./Puzzle24)
 
 ---
 
@@ -54,9 +56,13 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 ## 4. Proyectos Finales
 
 * **`Reconocimiento Facial - Proyecto te...`**: Implementación integral del sistema de reconocimiento facial.
+* - [Reconocimiento Facial terminado](./Reconocimiento%20Facial%20-%20Proyecto%20terminado)
 * **`Proyecto Comentarista IA` (`Tetris-Narrator`)**: Sistema inteligente e interactivo diseñado para analizar estados de juego en tiempo real y generar narraciones o comentarios automáticos mediante Inteligencia Artificial.
+* - [Narrador](./Tetris-Narrator)
 
 ---
 ### 5. Recursos Adicionales del Repositorio
 * **`Diagnostico`**: Evaluaciones iniciales y actividades introductorias del curso.
-* **`Exposicion`**: Material de apoyo, diapositivas y presentaciones de los temas teóricos.
+* * - [Diagnostico](./Diagnostico)
+* **`Exposicion`**: Exposicion sobre los modelos de IA usados en compiladores, con ejemplos.
+* * - [Exposicion](./Exposicion)
