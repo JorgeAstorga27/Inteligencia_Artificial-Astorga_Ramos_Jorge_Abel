@@ -29,24 +29,25 @@ Bloque dedicado al ciclo completo de desarrollo de un sistema de visión artific
 Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitecturas de redes neuronales implementados desde las bases teóricas hasta el uso de frameworks.
 
 * **`RegresionLineal`**: Modelos de predicción continua para encontrar relaciones lineales entre variables.
+* - [Regresión Lineal](./Ejercicios/code/RegresionLineal)
 * **`KMeans`**: Algoritmo de aprendizaje no supervisado para la partición y agrupamiento (clustering) de datos por distancia.
+* - [KMeans](./Ejercicios/code/KMeans)
 * **`KNN` (K-Nearest Neighbors)**: Modelo de clasificación y regresión basado en la proximidad con los vecinos más cercanos.
+* - [KNN](./Ejercicios/code/KNN)
 * **`SVM` (Support Vector Machines)**: Clasificación de datos mediante la búsqueda del hiperplano de separación óptimo.
+* - [SVM](./Ejercicios/code/SVM)
 * **`Perceptron`**: Implementación del modelo fundacional de neurona artificial, aplicado específicamente a la conversión práctica de unidades (grados Kelvin a Centígrados).
+* - [Perceptrón](./Ejercicios/code/Perceptron)
 * **`MultilayerPerceptron`**: Redes neuronales densas feedforward (MLP) con capas ocultas y algoritmos de retropropagación.
+* - [Multilayer Perceptron](./Ejercicios/code/MultilayerPerceptron)
 * **`RedNeuronal`**: Scripts, arquitecturas adicionales y experimentos en el ámbito del Deep Learning.
+* - [Red Neuronal](./Ejercicios/code/RedNeuronal)
 * **`CNN` (Convolutional Neural Networks)**: Redes neuronales convolucionales optimizadas para la extracción de características espaciales en imágenes.
+* - [CNN](./Ejercicios/code/CNN)
 * **`Reconocimiento Facial - Ejercicio`**: Prácticas iniciales y pruebas de concepto utilizando algoritmos clásicos de reconocimiento y extracción de características.
-
-- [CNN](./Ejercicios/code/CNN)
-- [KMeans](./Ejercicios/code/KMeans)
-- [KNN](./Ejercicios/code/KNN)
-- [Multilayer Perceptron](./Ejercicios/code/MultilayerPerceptron)
-- [Perceptrón](./Ejercicios/code/Perceptron)
-- [Red Neuronal](./Ejercicios/code/RedNeuronal)
-- [Regresión Lineal](./Ejercicios/code/RegresionLineal)
-- [SVM](./Ejercicios/code/SVM)
+* - [Reconocimiento Ejercicio CNN](./Reconocimiento%20Facial%20-%20Ejercicio)
 - [Otros ejercicios Machine Learning](./Ejercicios/code/Machine%20Learning)
+
 ---
 
 ## 4. Proyectos Finales
