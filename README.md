@@ -25,7 +25,7 @@ Bloque dedicado al ciclo completo de desarrollo de un sistema de visión artific
 
 ---
 
-## 🤖 Ejercicios de Machine Learning
+## 3. Ejercicios de Machine Learning
 Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitecturas de redes neuronales implementados desde las bases teóricas hasta el uso de frameworks.
 
 * **`RegresionLineal`**: Modelos de predicción continua para encontrar relaciones lineales entre variables.
@@ -40,12 +40,12 @@ Colección de algoritmos de aprendizaje supervisado, no supervisado y arquitectu
 
 ---
 
-## 🚀 Proyectos Finales
+## 4. Proyectos Finales
 
 * **`Reconocimiento Facial - Proyecto te...`**: Implementación integral del sistema de reconocimiento facial.
 * **`Proyecto Comentarista IA` (`Tetris-Narrator`)**: Sistema inteligente e interactivo diseñado para analizar estados de juego en tiempo real y generar narraciones o comentarios automáticos mediante Inteligencia Artificial.
 
 ---
-### Recursos Adicionales del Repositorio
+### 5. Recursos Adicionales del Repositorio
 * **`Diagnostico`**: Evaluaciones iniciales y actividades introductorias del curso.
 * **`Exposicion`**: Material de apoyo, diapositivas y presentaciones de los temas teóricos.
